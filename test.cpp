@@ -8,7 +8,7 @@ using namespace std;
 using namespace cv;
 
 /*void main() {
-	string path = "Gaurav.jpg";
+	string path = "chando.jpg";
 	Mat	img = imread(path);
 	imshow("Frame", img);
 	waitKey(0);
@@ -19,7 +19,7 @@ void main() {
 	CascadeClassifier facedetect;
 	Mat img;
 	facedetect.load("haarcascade_frontalface_default.xml");
-
+	
 	while (true) {
 		video.read(img);
 
@@ -31,14 +31,14 @@ void main() {
 
 		for (int i = 0; i < faces.size(); i++) {
 			rectangle(img, faces[i].tl(), faces[i].br(), Scalar(50, 50, 255), 3);
-			rectangle(img, Point(0, 0), Point(250, 70), Scalar(50, 50, 255), FILLED);
-			putText(img, to_string(faces.size()) + " Face Found", Point(10, 40), FONT_HERSHEY_DUPLEX, 1, Scalar(255, 255, 255), 1);
+			rectangle(img, Point(0,0), Point(250,70), Scalar(50, 50, 255), FILLED);
+			putText(img, to_string(faces.size())+" Face Found", Point(10, 40), FONT_HERSHEY_DUPLEX, 1, Scalar(255, 255, 255), 1);
 		}
 
-
+		
 		imshow("Frame", img);
 		waitKey(1);
-
+		
 
 	}
 }
